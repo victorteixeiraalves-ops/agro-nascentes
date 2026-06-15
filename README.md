@@ -1,2 +1,2 @@
 # agro-nascentes
-Agro Nascentes é um projeto voltado à preservação e recuperação de nascentes, promovendo o uso sustentável dos recursos naturais e a conservação da água nas áreas rurais.
+O Agro Nascentes é um projeto voltado à recuperação e proteção de nascentes. Nosso foco é cudar da água e incentivar práticas que ajudem a preservar o meio ambiente, mesmo diante da necessidade do uso de técnicas agrícolas vistas como algo devastador.
