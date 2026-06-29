@@ -1,143 +1,91 @@
-/* 1. CONFIGURAÇÕES BASE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Nascentes - Sustentabilidade e Produtividade</title>
+    <!-- Link para a fonte Inter (usada no arquivo CSS) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root {
-    --azul-nascente: #1A5F7A;    /* Azul profundo para água e rios */
-    --azul-claro: #F0F7F9;       /* Fundo suave e refrescante */
-    --verde-agro: #57C5B6;       /* Verde transição para vegetação */
-    --texto-principal: #2C3E50;  /* Cinza escuro profissional */
-    --texto-apoio: #5A6B7C;      /* Textos secundários */
-    --branco: #FFFFFF;
-    --sombra: rgba(26, 95, 122, 0.08);
-}
+    <!-- NAVEGAÇÃO / HEADER SUPERIOR -->
+    <nav class="navbar">
+        <div class="logo">Agro<span>Nascentes</span></div>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pilares">Pilares</a></li>
+            <li><a href="#impacto">Nosso Impacto</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-body {
-    background-color: var(--azul-claro);
-    color: var(--texto-principal);
-    line-height: 1.6;
-}
+    <!-- SEÇÃO HERO (BOAS-VINDAS) -->
+    <header id="inicio" class="hero-section">
+        <h1>Protegendo a água que alimenta a terra.</h1>
+        <p>Unimos soluções tecnológicas de ponta à preservação de mananciais para garantir um ecossistema agrícola próspero e sustentável.</p>
+        <a href="#pilares" class="btn-preservar">Conheça Nossas Ações</a>
+    </header>
 
-/* 2. NAVEGAÇÃO */
-.navbar {
-    background-color: var(--branco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 8%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px var(--sombra);
-}
+    <!-- SEÇÃO DE PILARES / PROJETOS -->
+    <main id="pilares" class="grid-container">
+        <div class="grid-card">
+            <h3>Recuperação de Mata Ciliar</h3>
+            <p>Plantio planejado e cercamento no entorno de rios para proteção natural do solo contra o assoreamento e erosões.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Manejo Inteligente</h3>
+            <p>Sistemas de irrigação localizada que reduzem o desperdício, captando apenas o volume hídrico essencial à cultura.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Monitoramento de Fontes</h3>
+            <p>Sensores conectados em tempo real para análise contínua da vazão, temperatura e pureza da água nas propriedades.</p>
+        </div>
+    </main>
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--azul-nascente);
-    letter-spacing: -0.5px;
-}
+    <!-- SEÇÃO DE IMPACTO (DADOS ANIMADOS PELO JS) -->
+    <section id="impacto" class="grid-container secao-dados">
+        <div class="grid-card" style="text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--azul-nascente);">
+                <span class="numero-contador" data-target="150">0</span>+
+            </h3>
+            <p style="color: var(--texto-apoio); font-weight: 600;">Nascentes Protegidas</p>
+        </div>
+        <div class="grid-card" style="text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--azul-nascente);">
+                <span class="numero-contador" data-target="1200">0</span> ha
+            </h3>
+            <p style="color: var(--texto-apoio); font-weight: 600;">Áreas de Preservação</p>
+        </div>
+        <div class="grid-card" style="text-align: center;">
+            <h3 style="font-size: 2.5rem; color: var(--azul-nascente);">
+                <span class="numero-contador" data-target="85">0</span>%
+            </h3>
+            <p style="color: var(--texto-apoio); font-weight: 600;">Eficiência Hídrica</p>
+        </div>
+    </section>
 
-.logo span {
-    color: var(--verde-agro);
-}
+    <!-- FORMULÁRIO DE CONTATO / ADESÃO -->
+    <section id="contato" style="max-width: 600px; margin: 4rem auto; padding: 2rem; background: var(--branco); border-radius: 20px; box-shadow: 0 10px 30px var(--sombra);">
+        <h2 style="color: var(--azul-nascente); text-align: center; margin-bottom: 1.5rem;">Proteja sua propriedade</h2>
+        <form style="display: flex; flex-direction: column; gap: 1rem;">
+            <input type="text" placeholder="Seu Nome" required style="padding: 0.8rem; border: 1px solid var(--borda); border-radius: 8px; font-size: 1rem;">
+            <input type="email" placeholder="Seu E-mail" required style="padding: 0.8rem; border: 1px solid var(--borda); border-radius: 8px; font-size: 1rem;">
+            <textarea placeholder="Como podemos ajudar a proteger as nascentes da sua região?" rows="4" required style="padding: 0.8rem; border: 1px solid var(--borda); border-radius: 8px; font-size: 1rem; resize: none;"></textarea>
+            <button type="submit" class="btn-preservar" style="border: none; cursor: pointer; width: 100%;">Enviar Mensagem</button>
+        </form>
+    </section>
 
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-}
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 AgroNascentes. Cultivando a vida, preservando a fonte.</p>
+    </footer>
 
-.menu a {
-    text-decoration: none;
-    color: var(--texto-principal);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.menu a:hover {
-    color: var(--azul-nascente);
-}
-
-/* 3. HERO (CONTEÚDO PRINCIPAL) */
-.hero-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-.hero-section h1 {
-    font-size: 3.5rem;
-    color: var(--azul-nascente);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-.hero-section p {
-    font-size: 1.25rem;
-    color: var(--texto-apoio);
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-}
-
-/* Botão Estilizado */
-.btn-preservar {
-    display: inline-block;
-    background-color: var(--azul-nascente);
-    color: var(--branco);
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(26, 95, 122, 0.2);
-    transition: all 0.3s ease;
-}
-
-.btn-preservar:hover {
-    background-color: var(--verde-agro);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(87, 197, 182, 0.3);
-}
-
-/* 4. GRID DE PROJETOS E PILARES */
-.grid-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-}
-
-.grid-card {
-    background-color: var(--branco);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    border-left: 5px solid var(--verde-agro);
-    box-shadow: 0 10px 30px var(--sombra);
-    transition: transform 0.3s ease;
-}
-
-.grid-card:hover {
-    transform: translateY(-5px);
-}
-
-.grid-card h3 {
-    font-size: 1.5rem;
-    color: var(--azul-nascente);
-    margin-bottom: 1rem;
-}
-
-/* 5. RODAPÉ */
-footer {
-    background-color: var(--azul-nascente);
-    color: var(--branco);
-    text-align: center;
-    padding: 3rem 1rem;
-    margin-top: 6rem;
-}
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
