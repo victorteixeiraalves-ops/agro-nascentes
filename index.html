@@ -1,0 +1,143 @@
+/* 1. CONFIGURAÇÕES BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --azul-nascente: #1A5F7A;    /* Azul profundo para água e rios */
+    --azul-claro: #F0F7F9;       /* Fundo suave e refrescante */
+    --verde-agro: #57C5B6;       /* Verde transição para vegetação */
+    --texto-principal: #2C3E50;  /* Cinza escuro profissional */
+    --texto-apoio: #5A6B7C;      /* Textos secundários */
+    --branco: #FFFFFF;
+    --sombra: rgba(26, 95, 122, 0.08);
+}
+
+body {
+    background-color: var(--azul-claro);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* 2. NAVEGAÇÃO */
+.navbar {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px var(--sombra);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--azul-nascente);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--verde-agro);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--azul-nascente);
+}
+
+/* 3. HERO (CONTEÚDO PRINCIPAL) */
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: var(--azul-nascente);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: var(--texto-apoio);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Botão Estilizado */
+.btn-preservar {
+    display: inline-block;
+    background-color: var(--azul-nascente);
+    color: var(--branco);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(26, 95, 122, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-preservar:hover {
+    background-color: var(--verde-agro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(87, 197, 182, 0.3);
+}
+
+/* 4. GRID DE PROJETOS E PILARES */
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.grid-card {
+    background-color: var(--branco);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border-left: 5px solid var(--verde-agro);
+    box-shadow: 0 10px 30px var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+}
+
+.grid-card h3 {
+    font-size: 1.5rem;
+    color: var(--azul-nascente);
+    margin-bottom: 1rem;
+}
+
+/* 5. RODAPÉ */
+footer {
+    background-color: var(--azul-nascente);
+    color: var(--branco);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 6rem;
+}
