@@ -1,0 +1,127 @@
+css/* 1. RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --verde-primario: #2D5A27;    /* Verde floresta para destaques */
+    --verde-claro: #E8F5E9;       /* Fundo suave ecológico */
+    --texto-escuro: #212121;      /* Alta legibilidade */
+    --texto-mutado: #666666;      /* Textos secundários */
+    --branco-puro: #FFFFFF;       /* Cards e blocos */
+    --borda: #E0E0E0;             /* Linhas sutis */
+}
+
+body {
+    background-color: var(--verde-claro);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* 2. ESTRUTURA DO NAV (MENU) */
+nav {
+    background-color: var(--branco-puro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde-primario);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul a:hover {
+    color: var(--verde-primario);
+}
+
+/* 3. HERO SECTION (BANNER PRINCIPAL) */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--verde-primario);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--texto-mutado);
+    margin-bottom: 2rem;
+}
+
+/* Botão Sustentável */
+.btn-consciente {
+    display: inline-block;
+    background-color: var(--verde-primario);
+    color: var(--branco-puro);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-consciente:hover {
+    background-color: #1E3F1A;
+    transform: translateY(-2px);
+}
+
+/* 4. SEÇÃO DE CARDS (PRODUTOS / PILARES) */
+.conteudo {
+    max-width: 1100px;
+    margin: 0 auto padding: 4rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--branco-puro);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(45, 90, 39, 0.1);
+}
+
+.card h2 {
+    color: var(--verde-primario);
+    margin-bottom: 1rem;
+}
+
+/* 5. RODAPÉ */
+footer {
+    background-color: var(--verde-primario);
+    color: var(--branco-puro);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
